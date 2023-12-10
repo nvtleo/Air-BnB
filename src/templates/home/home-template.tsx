@@ -10,7 +10,6 @@ function HomeTemplate() {
             <Header />
             <Suspense fallback="loading">
                 <Outlet />
-
             </Suspense>
             <Footer />
 
