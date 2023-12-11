@@ -23,8 +23,8 @@ function Header() {
 
     return (
         <>
-            <header>
-                <div className='flex items-center justify-between' style={{ backgroundColor: "black", width: "100%", height: "10rem" }}>
+            <header style={{ position: "relative" }}>
+                <div className='flex items-center justify-between' style={{ backgroundColor: "black", width: "100%", paddingBottom: "6rem" }}>
                     <div className="header__img">
                         <img style={{ width: "10rem", height: "8rem", marginLeft: "6rem" }} src="/src/assets/img/airbnb-logo.png" alt="" />
                     </div>
@@ -43,10 +43,7 @@ function Header() {
                                 </Space>
                             </a>
                         </Dropdown>
-
                     </div>
-
-
                 </div>
 
             </header>
