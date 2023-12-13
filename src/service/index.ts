@@ -1,0 +1,1 @@
+export { axiosWthoutAuth } from "./axios.config";
