@@ -37,7 +37,7 @@ function Footer() {
                         <p>Chỗ ở khẩn cấp Airbnb.org</p>
                     </div>
                 </div>
-                <hr />
+                <hr style={{ width: "100%", color: "#DDDDDD", boxShadow: " 0 0 5px #ccc", marginBottom: "2rem" }} />
                 <div className="footer__end flex justify-between">
                     <div className="end__text flex">
                         <p>© 2023 Airbnb, Inc.</p>
@@ -50,8 +50,6 @@ function Footer() {
                         <IconIs />
                         <IconTw />
                     </div>
-
-
                 </div>
             </div>
         </>

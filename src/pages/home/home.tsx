@@ -11,13 +11,7 @@ function Home() {
     const handleNavigate = () => {
         navigate("/Locations");
     };
-    // const [locations, setLocations] = useState([]);
-    // useEffect(() => {
-    //     IIFE(async () => {
-    //         const resp = await GetLocation();
-    //         setLocations(resp)
-    //     })
-    // }, []);
+
     return (
         <>
             <div className="carousel">
@@ -35,6 +29,13 @@ function Home() {
                     <button className='btn__introsm'>Khách</button>
                     <button> <p style={{ display: "none" }}>a</p> <IconSearch /></button>
                 </div>
+            </div>
+
+            <div className="img__footer">
+                <img src="/src/assets/img/img-footer1.png" alt="" />
+                <img src="/src/assets/img/img-footer2.png" alt="" />
+                <img src="/src/assets/img/img-footer3.png" alt="" />
+                <img src="/src/assets/img/img-footer4.png" alt="" />
             </div>
         </>
     )

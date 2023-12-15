@@ -5,6 +5,7 @@ import IconInsta from '../../assets/icon/icon-header'
 import { UnorderedListOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 const items: MenuProps['items'] = [
     {
@@ -20,25 +21,28 @@ const items: MenuProps['items'] = [
     },
 ];
 function Header() {
-
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate("/");
+    };
     return (
         <>
             <header style={{ position: "relative" }}>
-                <div className='flex items-center justify-between' style={{ backgroundColor: "black", width: "100%", paddingBottom: "6rem" }}>
+                <div className='flex items-center justify-between' style={{ backgroundColor: "white", width: "100%", paddingBottom: "3rem" }}>
                     <div className="header__img">
-                        <img style={{ width: "10rem", height: "8rem", marginLeft: "6rem" }} src="/src/assets/img/airbnb-logo.png" alt="" />
+                        <img onClick={handleNavigate} style={{ width: "16rem", height: "8rem", marginLeft: "6rem" }} src="/src/assets/img/logo-pink.jpg" alt="" />
                     </div>
                     <div className="header__info">
-                        <Link className='text-4xl text-stone-50 Link' to={"."}>Nơi ở</Link>
-                        <Link className='text-4xl text-stone-50 mx-10 Link' to={"."}>Trại nghiệm</Link>
-                        <Link className='text-4xl text-stone-50  Link' to={"."}>Trải Nghiệm trực tuyến</Link>
+                        <Link className='text-4xl text-slate-950 Link' to={"."}>Nơi ở</Link>
+                        <Link className='text-4xl text-slate-950 mx-10 Link' to={"."}>Trại nghiệm</Link>
+                        <Link className='text-4xl  text-slate-950  Link' to={"."}>Trải Nghiệm trực tuyến</Link>
                     </div>
                     <div className="header__log flex items-center">
-                        <Link className='Link text-3xl text-stone-50 p-4' to={"."}>Đón tiếp khách</Link>
+                        <Link className='Link text-3xl  text-slate-950 p-4' to={"."}>Đón tiếp khách</Link>
                         <IconInsta />
                         <Dropdown menu={{ items }} trigger={['click']}>
                             <a onClick={(e) => e.preventDefault()}>
-                                <Space className='text-lg text-black bg-white ml-20 mr-10 Log border px-10 py-5 rounded-[3rem]'>
+                                <Space className='text-lg text-black bg-pink ml-20 mr-10 Log border px-10 py-5 rounded-[3rem]'>
                                     <UnorderedListOutlined className='text-4xl' />
                                 </Space>
                             </a>
