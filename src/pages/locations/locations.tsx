@@ -8,10 +8,9 @@ function Locations() {
     const [locations, setLocations] = useState([]);
     useEffect(() => {
         GetAllLocation()
-            .then((res) => { setLocations(res) })
+            .then((resp) => { setLocations(resp) })
             .catch((error) => console.error(error));
     }, []);
-    console.log(locations)
     // useEffect(() => {
     //     IIFE(async () => {
     //         const resp = await GetAllLocation();

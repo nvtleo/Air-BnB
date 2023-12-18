@@ -4,26 +4,23 @@ type Prop = {
     data: TLocation[]
 }
 function ListLocation(props: Prop) {
-    console.log(props)
     return (
         <>
             <hr style={{ width: "100%", color: "#DDDDDD", boxShadow: " 0 0 5px #ccc" }} />
-            <div className="flex flex-wrap gap-10 ml-20 mt-20">
+            <div className="flex flex-wrap gap-5 ml-4 mt-20">
                 {props.data.map((item) => {
                     return (
-
                         <ItemLocation
-                            key={item.id}
+                            id={item.id}
                             name={item.name}
                             src={item.src}
                             nation={item.nation}
                             pon={item.pon}
+                            key={item.id}
                         />
                     )
                 })}
-
             </div>
-
         </>
     )
 }

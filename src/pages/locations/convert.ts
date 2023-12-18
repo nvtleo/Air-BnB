@@ -8,6 +8,7 @@ export interface TLocationsAPI {
     hinhAnh: string
   }
   export const convert = (data: TLocationsAPI[]): TLocation[] => {
+    console.log(data)
 return data.map(item =>({
     nation: item.quocGia,
     src: item.hinhAnh,
@@ -15,7 +16,6 @@ return data.map(item =>({
     name: item.tenViTri,
     id: item.id
 })
-    
 )
   }
   

@@ -1,4 +1,3 @@
-
 import { axiosWthoutAuth } from './axios.config';
 export const GetAllLocation = async ()=>{
     try {

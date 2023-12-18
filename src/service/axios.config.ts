@@ -9,3 +9,4 @@ export const axiosWthoutAuth = axios.create({
         tokenCybersoft: TOKEN,
       }
 })
+
