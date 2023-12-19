@@ -4,6 +4,7 @@ import { GetListRoom } from '../../service/list-room.service';
 import { IIFE } from '../../util';
 import { TRoomAPI } from './type';
 import * as S from "./style"
+import { styled } from 'styled-components';
 function Roomlist() {
     const param = useParams<{ idRoom: string }>();
     console.log(param)
@@ -22,17 +23,17 @@ function Roomlist() {
             <S.RoomList>
                 {room?.map((roomItem, index) => (
 
-                    <div key={index}>
+                    <S.Room key={index}>
                         <div>
                             <h3 className='text-center font-bold text-3xl'>{roomItem.tenPhong}</h3>
                             <S.Image src={roomItem.hinhAnh} alt={roomItem.tenPhong} />
                         </div>
                         <div>
-                            <p>Giá phòng: {roomItem.giaTien}$</p>
-                            <p>Số khách: {roomItem.khach}</p>
-                            <p>Các tiện nghi: {roomItem.moTa}</p>
+                            <S.Detail>Giá phòng: {roomItem.giaTien}$</S.Detail>
+                            <S.Detail>Số khách: {roomItem.khach}</S.Detail>
+                            <S.Info>Các tiện nghi: {roomItem.moTa}</S.Info>
                         </div>
-                    </div>
+                    </S.Room>
                 ))}
 
             </S.RoomList>

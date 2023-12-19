@@ -9,3 +9,14 @@ width:110rem;
 height: 40rem;
 border-radius: 2rem;
 `
+export const Room = styled.div`
+margin-bottom: 10rem;
+`
+export const Detail = styled.p`
+font-size: 2rem;
+text-align: center;
+font-weight: 500;
+`
+export const Info = styled.p`
+font-size: 2.4rem;
+`
