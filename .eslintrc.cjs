@@ -6,11 +6,13 @@ module.exports = {
     "plugin:react-hooks/recommended",
   ],
   parser: "@typescript-eslint/parser",
-  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+  paserOptions: { ecmaVersion: "latest", sourceType: "module" },
   plugins: ["react-refresh"],
   ignorePatterns: ["**/typescript/*.ts"],
   rules: {
     "react-refresh/only-export-components": "warn",
     "@typescript-eslint/ban-ts-comment": "warn",
   },
+
 };
+
