@@ -1,0 +1,61 @@
+.carousel img {
+    width: 100%;
+    height: 50rem;
+    position: relative;
+}
+
+.btn__intro {
+    width: 90rem;
+    height: 7rem;
+    position: absolute;
+    top: 7rem;
+    left: 15%;
+    background-color: white;
+    border-radius: 4rem;
+    display: flex;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.btn__location {
+    font-size: 2rem;
+    padding-left: 3rem;
+    width: 30%;
+}
+
+.btn__location:hover {
+    color: #FF385C;
+}
+
+.btn__introsm {
+    font-size: 2rem;
+    width: 20%;
+}
+
+.btn__introsm:hover {
+    color: #FF385C;
+}
+
+.span__btn {
+    width: 1px;
+    height: 5rem;
+    background-color: #DDDDDD;
+}
+
+/* footer */
+.img__footer {
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+    margin-left: 80px;
+}
+
+.img__footer img {
+    width: 26rem;
+    height: 24rem;
+    border-radius: 2rem;
+}

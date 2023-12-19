@@ -7,6 +7,9 @@ import Login from '../pages/login/login';
 import Register from '../pages/register/register';
 import RoomMng from '../pages/room-mng/room-mng';
 import UserMng from '../pages/user-mng/user-mng';
+// import Locations from '../components/Location/location';
+// import ListLocations from '../components/Location/list-locations/list-locations';
+import Locations from '../pages/locations/locations';
 
 export const router = createBrowserRouter([
     {
@@ -17,7 +20,7 @@ export const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/room-list",
+                path: "/room/:idRoom",
                 element: <Roomlist />
             },
             {
@@ -39,6 +42,10 @@ export const router = createBrowserRouter([
             {
                 path: "/user-mgn",
                 element: <UserMng />
+            },
+            {
+                path: "/Locations",
+                element: <Locations />
             }
 
         ])

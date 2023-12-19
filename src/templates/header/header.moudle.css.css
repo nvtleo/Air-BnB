@@ -1,0 +1,12 @@
+.Link:hover {
+    color: rgb(241, 25, 97);
+}
+
+.Log:hover {
+    color: rgb(241, 25, 97);
+}
+
+.Log,
+.Res:hover {
+    color: rgb(241, 25, 97);
+}
