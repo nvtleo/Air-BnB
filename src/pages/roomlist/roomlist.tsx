@@ -4,8 +4,12 @@ import { GetListRoom } from '../../service/list-room.service';
 import { IIFE } from '../../util';
 import { TRoomAPI } from './type';
 import * as S from "./style"
-import { styled } from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 function Roomlist() {
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate(`/room-detail/${param.idRoom}`);
+    };
     const param = useParams<{ idRoom: string }>();
     console.log(param)
     const [room, setRoom] = useState<TRoomAPI>()
@@ -17,21 +21,19 @@ function Roomlist() {
             }
         });
     }, []);
-    console.log(room)
     return (
         <>
             <S.RoomList>
                 {room?.map((roomItem, index) => (
-
                     <S.Room key={index}>
                         <div>
                             <h3 className='text-center font-bold text-3xl'>{roomItem.tenPhong}</h3>
-                            <S.Image src={roomItem.hinhAnh} alt={roomItem.tenPhong} />
+                            <S.Image onClick={handleNavigate} src={roomItem.hinhAnh} alt={roomItem.tenPhong} />
                         </div>
                         <div>
                             <S.Detail>Giá phòng: {roomItem.giaTien}$</S.Detail>
                             <S.Detail>Số khách: {roomItem.khach}</S.Detail>
-                            <S.Info>Các tiện nghi: {roomItem.moTa}</S.Info>
+                            <S.Info>Mô tả: {roomItem.moTa}</S.Info>
                         </div>
                     </S.Room>
                 ))}
