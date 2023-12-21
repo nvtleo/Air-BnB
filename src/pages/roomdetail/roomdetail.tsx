@@ -57,7 +57,7 @@ function Roomdetail() {
                     <p>
                         {detail?.wifi ? <IconWifi /> : ""}
                     </p>
-                    <p style={{ fontWeight: 500 }}>Miễn phí huỷ trong 48h</p>
+                    <p style={{ fontWeight: 500 }}>Miễn phí huỷ đặt phòng trong 48h</p>
                 </S.PInfo>
             </S.RoomDetail>
 
