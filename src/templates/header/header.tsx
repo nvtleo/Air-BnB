@@ -49,12 +49,8 @@ function Header() {
                         </Dropdown>
                     </div>
                 </div>
-
             </header>
-
         </>
     )
 }
-
-
 export default Header

@@ -1,8 +1,8 @@
 import { TRoomDetail } from '../pages/roomdetail/type';
 import { axiosWthoutAuth } from './axios.config';
-export const GetRoomDetail = async (id:string):Promise<TRoomDetail>=>{
+export const GetRoomDetail = async (id:number): Promise<TRoomDetail>=>{
     try {
-     const resp = await  axiosWthoutAuth("./phong-thue/1",{params:{id}});
+     const resp = await  axiosWthoutAuth(`./phong-thue/${id}`);
      console.log(resp.data.content,"resp")
      return resp.data.content
     } catch (error:any) {

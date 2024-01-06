@@ -19,3 +19,11 @@ export interface TRoomDetail {
     maViTri: number
     hinhAnh: string
   }
+  export interface TCommentAPI {
+    id: number
+    ngayBinhLuan: string
+    noiDung: string
+    saoBinhLuan: number
+    tenNguoiBinhLuan: string
+    avatar: string
+  }

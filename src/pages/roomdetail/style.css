@@ -1,0 +1,26 @@
+.ant-picker-separator {
+    font-size: 4rem;
+}
+
+.money__rom,
+.extra__money,
+.total__money {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.total__money {
+    font-weight: 600;
+}
+
+.space__cmt {
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cmt__all {
+    display: flex;
+    width: 50%;
+}
