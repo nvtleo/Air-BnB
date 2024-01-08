@@ -117,7 +117,7 @@ function Roomdetail() {
                 </div>
                 <hr style={{ marginTop: "5rem", fontSize: "2rem", fontWeight: 800 }} />
                 <div className="space__cmt">
-                    {comment?.map((item, index) => (
+                    {comment?.slice(0, 6).map((item, index) => (
                         <div className='cmt__all' key={index}>
                             <div>
                                 <S.AVT src={item.avatar} alt="" />
@@ -133,8 +133,12 @@ function Roomdetail() {
                     ))}
                 </div>
             </S.RoomDetail>
-
+            <div className="add__cmt">
+                <input type="text" placeholder='bình luận ....' />
+                <button>Thêm bình luận</button>
+            </div>
         </>
+
     )
 }
 
