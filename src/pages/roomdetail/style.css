@@ -1,0 +1,51 @@
+.ant-picker-separator {
+    font-size: 4rem;
+}
+
+.money__rom,
+.extra__money,
+.total__money {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.total__money {
+    font-weight: 600;
+}
+
+.space__cmt {
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cmt__all {
+    display: flex;
+    width: 50%;
+}
+
+.add__cmt {
+    margin-left: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+.add__cmt input {
+    padding: 2rem;
+    width: 500px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 2rem;
+    margin-right: 7rem;
+}
+
+.add__cmt button {
+    padding: 2rem;
+    width: 20rem;
+    height: 7rem;
+    font-size: 2rem;
+    color: white;
+    background-color: green;
+    border-radius: 3rem;
+}
