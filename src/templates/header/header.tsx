@@ -6,15 +6,10 @@ import { UnorderedListOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { useAppSelector } from '../../redux/hook';
-import { setLogin } from "../../redux/userSlice";
-import { removeLocal } from '../../util';
-import { ACCESS_TOKEN } from '../../const';
-import { useDispatch } from "react-redux";
 
 const items: MenuProps['items'] = [
     {
-        label: <Link to="/login">Đăng Nhập</Link>,
+        label: <Link to="/Login">Đăng Nhập</Link>,
         key: '0',
     },
     {
@@ -26,8 +21,6 @@ const items: MenuProps['items'] = [
     },
 ];
 function Header() {
-    const { login } = useAppSelector((rootReducer) => rootReducer.userReducer);
-    console.log(login.email, "login")
     const navigate = useNavigate();
     const handleNavigate = () => {
         navigate("/");
@@ -47,24 +40,21 @@ function Header() {
                     <div className="header__log flex items-center">
                         <Link className='Link text-3xl  text-slate-950 p-4' to={"."}>Đón tiếp khách</Link>
                         <IconInsta />
-                        {/* {login ? (
-                            <span className="Link text-3xl text-slate-950 p-4">{login.email}</span>
-                        ) : ( */}
-                        <>
-                            <Dropdown menu={{ items }} trigger={['click']}>
-                                <a onClick={(e) => e.preventDefault()}>
-                                    <Space className='text-lg text-black bg-pink ml-20 mr-10 Log border px-10 py-5 rounded-[3rem]'>
-                                        <UnorderedListOutlined className='text-4xl' />
-                                    </Space>
-                                </a>
-                            </Dropdown>
-                        </>
-                        {/* )} */}
-
+                        <Dropdown menu={{ items }} trigger={['click']}>
+                            <a onClick={(e) => e.preventDefault()}>
+                                <Space className='text-lg text-black bg-pink ml-20 mr-10 Log border px-10 py-5 rounded-[3rem]'>
+                                    <UnorderedListOutlined className='text-4xl' />
+                                </Space>
+                            </a>
+                        </Dropdown>
                     </div>
                 </div>
+
             </header>
+
         </>
     )
 }
+
+
 export default Header
