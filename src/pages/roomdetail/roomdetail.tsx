@@ -17,7 +17,7 @@ const { RangePicker } = DatePicker;
 import moment from 'moment';
 import "./style.css"
 import { GetComment } from '../../service/comment.service';
-import { P } from '../../components/Location/item-locations/style';
+// import { P } from '../../components/Location/item-locations/style';
 
 function Roomdetail() {
     const [selectedDateRange, setSelectedDateRange] = useState<[moment.Moment, moment.Moment] | null>(null);

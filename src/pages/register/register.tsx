@@ -1,9 +1,31 @@
 import { Input, Col, Row, Radio } from "antd";
 // import { useState } from "react";
 import { useFormik } from "formik";
+const validate = (values: any) => {
+    console.log(validate)
+    type A = typeof values; // typeof để lấy Type của giá trị values.
+    type B = keyof A; // keyof: lấy property của kiểu dữ liệu
+    const errors: Record<B, string> = {};
+    if (values.email.trim().length === 0) {
+        errors.email = "Email Không Được Bỏ Trống";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+        errors.email = "Invalid email address";
+    }
+    if (values.phone.trim().length === 0) {
+        errors.phone = "Phone Không Được Bỏ Trống";
+    } else if (!(values.phone.length <= 10 && values.phone.length >= 5)) {
+        errors.phone = "Phone Không Được Bỏ Trống";
+    }
+    if (!(values.name.length <= 50 && values.name.length >= 10)) {
+        errors.name = "Name Không Được Bỏ Trống";
+    }
+    return errors;
+};
+
 import * as Y from "yup";
 import { signUp } from "../../service/register.service";
 import { useNavigate } from "react-router-dom";
+
 const validationSchema = Y.object({
     email: Y.string().email("Email không hợp lệ.").required(),
     name: Y.string()
@@ -13,8 +35,10 @@ const validationSchema = Y.object({
     passWord: Y.string().min(6).max(50).required(),
     confirmPassWord: Y.string().oneOf([Y.ref("passWord")]),
 });
+
 function Register() {
     const navigate = useNavigate();
+
     // -- Start Form --
     const formik = useFormik({
         initialValues: {
@@ -25,8 +49,10 @@ function Register() {
             passWord: "",
             confirmPassWord: "",
         },
+
         validationSchema,
         onSubmit: (values) => {
+
             const payload = {
                 email: values.email,
                 password: values.passWord,
@@ -40,31 +66,6 @@ function Register() {
         },
     });
     console.log(formik);
-    const validate = (values: any) => {
-        console.log(validate)
-        type A = typeof values; // typeof để lấy Type của giá trị values.
-        type B = keyof A; // keyof: lấy property của kiểu dữ liệu
-        const errors: Record<B, string> = {};
-        if (values.email.trim().length === 0) {
-            errors.email = "Email Không Được Bỏ Trống";
-
-        }
-        else if (formik.values.email) {
-            errors.email = "email đã tồn tại";
-        }
-        else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-            errors.email = "email không hợp lệ";
-        }
-        if (values.phone.trim().length === 0) {
-            errors.phone = "Phone Không Được Bỏ Trống";
-        } else if (!(values.phone.length <= 10 && values.phone.length >= 5)) {
-            errors.phone = "Phone Không Được Bỏ Trống";
-        }
-        if (!(values.name.length <= 50 && values.name.length >= 10)) {
-            errors.name = "Name Không Được Bỏ Trống";
-        }
-        return errors;
-    };
     return (
         <form onSubmit={formik.handleSubmit} className="px-16 py-16">
             <Row gutter={[16, 16]}>

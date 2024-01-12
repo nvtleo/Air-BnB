@@ -1,21 +1,24 @@
-// import React from "react";
+import React from "react";
 import { Input, Row, Col } from "antd";
 import { useFormik } from "formik";
 import * as Y from "yup";
+import { useDispatch } from "react-redux";
+
+
 import { signIn } from "../../service/register.service";
-// import { saveLocal } from "../../util/index";
-// import { ACCESS_TOKEN } from "../../const/index";
-// import { useDispatch } from "react-redux";
-// import { loginSuccess } from "../../redux/userSlice";
-// import { useAppSelector } from "../../redux/hook";
+import { saveLocal } from "../../util/index";
+import { ACCESS_TOKEN } from "../../const/index";
+import { loginSuccess } from "../../redux/userSlice";
 import { useNavigate } from "react-router-dom";
+
 const validationSchema = Y.object({
     email: Y.string().email().required(),
     password: Y.string().required(),
 });
+
 function Login() {
     const navigate = useNavigate();
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const { handleSubmit, getFieldProps } = useFormik({
         initialValues: {
             email: "",
@@ -27,12 +30,12 @@ function Login() {
             signIn(values).then((resp) => {
                 alert("Đăng nhập thành công")
                 navigate("/");
-                // saveLocal(ACCESS_TOKEN, resp.accessToken);
-                // dispatch(
-                //     loginSuccess({
-                //         email: resp.email,
-                //     }),
-                // );
+                saveLocal(ACCESS_TOKEN, resp.accessToken);
+                dispatch(
+                    loginSuccess({
+                        email: resp.email,
+                    }),
+                );
             });
         },
     });
@@ -54,6 +57,7 @@ function Login() {
                 className="bg-lime-600 text-white px-4 py-2 rounded-2xl mt-4"
             >
                 Login
+
             </button>
         </form>
     );

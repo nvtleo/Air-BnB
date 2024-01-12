@@ -18,22 +18,18 @@ type TBody = {
       throw new Error(error);
     }
   };
-
   type TDataSignin = {
     email: string;
     password: string;
   };
-  
   export const signIn = async (data: TDataSignin) => {
     try {
       const resp = await axiosWthoutAuth("/auth/signin", {
         method: "POST",
         data,
       });
-      // fetch: body
-      // axios: data
-  
-      return resp.data.content;
+      console.log(resp.data.content)
+    return resp.data.content;
     } catch (error: any) {
       throw new Error(error);
     }
