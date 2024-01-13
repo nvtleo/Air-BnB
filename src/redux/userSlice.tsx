@@ -17,7 +17,6 @@ const userSlice = createSlice({
         },
     },
 });
-
 export const userReducer = userSlice.reducer;
 
 export const { loginSuccess, setLogin } = userSlice.actions;
