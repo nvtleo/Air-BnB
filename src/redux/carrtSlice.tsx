@@ -8,7 +8,7 @@ type State = {
 const initialState: State = {
     cart: [],
 };
-
+// test merge
 const cartSlice = createSlice({
     initialState,
     name: "cartSlice",
