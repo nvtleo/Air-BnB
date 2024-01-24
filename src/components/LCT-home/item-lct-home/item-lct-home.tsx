@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import * as S from "./style"
 import "./location-home.css"
 export type TItemLCT = {

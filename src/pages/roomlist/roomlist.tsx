@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { GetListRoom } from '../../service/list-room.service';
 import { IIFE } from '../../util';

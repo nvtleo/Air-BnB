@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 // import { IIFE } from '../../util';
 import { GetAllLocation } from '../../service/test-location.service';
 import ListLocation from '../../components/Location/list-locations/list-locations';

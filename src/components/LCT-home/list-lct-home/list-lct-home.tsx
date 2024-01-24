@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import type { TItemLCT } from '../item-lct-home/item-lct-home'
 import ItemLctHome from '../item-lct-home/item-lct-home'
 import * as S from "./style"

@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import ItemLocation, { TLocation } from '../item-locations/item-location'
 type Prop = {
     data: TLocation[]

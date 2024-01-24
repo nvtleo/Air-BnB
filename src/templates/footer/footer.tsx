@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import "./footer.moudle.css"
 import IconFb from '../../assets/icon/icon-fb'
 import IconIs from '../../assets/icon/icon-is'
