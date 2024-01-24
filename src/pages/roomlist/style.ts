@@ -5,10 +5,14 @@ width: 90%;
 margin: auto;
 `
 export const Image = styled.img`
-width:110rem;
-height: 40rem;
-border-radius: 2rem;
-`
+  width: 110rem;
+  height: 40rem;
+  border-radius: 2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
 export const Room = styled.div`
 margin-bottom: 10rem;
 `
