@@ -30,7 +30,9 @@ function Home() {
                         className='btn__location'>
                         Địa điểm</button>
                     <span className='span__btn'></span>
-                    <button className='btn__introsm'>Nhận Phòng</button>
+                    <button
+                        onClick={handleNavigate}
+                        className='btn__introsm'>Nhận Phòng</button>
                     <span className='span__btn'></span>
                     <button className='btn__introsm'>Trả phòng</button>
                     <span className='span__btn'></span>

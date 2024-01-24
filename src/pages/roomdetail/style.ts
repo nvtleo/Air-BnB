@@ -13,6 +13,7 @@ export const Image = styled.img`
 width:110rem;
 height: 40rem;
 border-radius: 2rem;
+
 `
 
 export const PInfo = styled.div`
