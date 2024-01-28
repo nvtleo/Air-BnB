@@ -26,7 +26,7 @@ function Roomdetail() {
     // const handleDateChange = (values: [moment.Moment, moment.Moment] | null) => {
     //     setSelectedDateRange(values);
     // };
-    const handleDateChange = (values: RangeValue<Dayjs>) => {
+    const handleDateChange = (values: RangeValue<Dayjs> | null) => {
         setSelectedDateRange(values as [moment.Moment, moment.Moment]);
     };
 
@@ -96,6 +96,7 @@ function Roomdetail() {
                                     style={{ width: "100%", fontSize: "30px", borderColor: "black", fontWeight: 700 }}
                                     placeholder={["Nhận phòng", "Trả phòng"]}
                                     onChange={handleDateChange}
+                                    disabledDate={(current) => current && current < moment().startOf('day')}
                                 />
                             </Space>
                         </div>
