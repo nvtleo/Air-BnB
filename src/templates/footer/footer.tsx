@@ -1,8 +1,12 @@
 // import React from 'react'
 import "./footer.moudle.css"
-import IconFb from '../../assets/icon/icon-fb'
-import IconIs from '../../assets/icon/icon-is'
-import IconTw from '../../assets/icon/icon-tw'
+// import IconFb from '../../assets/icon/icon-fb'
+// import IconIs from '../../assets/icon/icon-is'
+// import IconTw from '../../assets/icon/icon-tw'
+
+import IconFb from './../../../dist/assets/icon/icon-fb';
+import IconIs from './../../../dist/assets/icon/icon-is';
+import IconTw from './../../../dist/assets/icon/icon-tw';
 function Footer() {
     return (
         <>

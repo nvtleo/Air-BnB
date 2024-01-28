@@ -1,6 +1,6 @@
 // import React, { useEffect, useState } from 'react'
 import "./home.moudl.css"
-import IconSearch from '../../assets/icon/icon-search'
+// import IconSearch from '../../assets/icon/icon-search'
 // import { GetLocation } from '../../service/locatin.service'
 import { useNavigate } from 'react-router-dom';
 import ListLctHome from "../../components/LCT-home/list-lct-home/list-lct-home";
@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import { GetLocationsHome } from "../../service/location-home.service";
 import { converts } from "./convert";
 // import { TItemLCT } from "../../components/LCT-home/item-lct-home/item-lct-home";
+
+import IconSearch from './../../../dist/assets/icon/icon-search';
 function Home() {
     const navigate = useNavigate();
     const handleNavigate = () => {
@@ -23,7 +25,7 @@ function Home() {
     return (
         <>
             <div className="carousel">
-                <img src="/src/assets/img/crs.jpg" alt="" />
+                <img src="/dist/assets/img/crs.jpg" alt="" />
                 <div className="btn__intro">
                     <button
                         onClick={handleNavigate}
