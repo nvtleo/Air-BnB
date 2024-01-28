@@ -9,7 +9,7 @@ import { GetLocationsHome } from "../../service/location-home.service";
 import { converts } from "./convert";
 // import { TItemLCT } from "../../components/LCT-home/item-lct-home/item-lct-home";
 
-import IconSearch from './../../../dist/assets/icon/icon-search';
+import IconSearch from "../../assets/icon/icon-search";
 function Home() {
     const navigate = useNavigate();
     const handleNavigate = () => {
@@ -45,10 +45,10 @@ function Home() {
             {/* location phần trang */}
             <ListLctHome data={converts(locationsHome)} />
             <div className="img__footer">
-                <img src="/src/assets/img/img-footer1.png" alt="" />
-                <img src="/src/assets/img/img-footer2.png" alt="" />
-                <img src="/src/assets/img/img-footer3.png" alt="" />
-                <img src="/src/assets/img/img-footer4.png" alt="" />
+                <img src="/dist/assets/img/img-footer1.png" alt="" />
+                <img src="/dist/assets/img/img-footer2.png" alt="" />
+                <img src="/dist/assets/img/img-footer3.png" alt="" />
+                <img src="/dist/assets/img/img-footer4.png" alt="" />
             </div>
         </>
     )
