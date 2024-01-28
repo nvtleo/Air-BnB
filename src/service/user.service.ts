@@ -1,4 +1,4 @@
-import { axiosWithoutAuth } from "./axios.config";
+import { axiosWthoutAuth } from "./axios.config";
 
 type TBody = {
   id: number;
@@ -13,7 +13,7 @@ type TBody = {
 
 export const signUp = async (data: TBody) => {
   try {
-    const resp = await axiosWithoutAuth("/auth/signup", {
+    const resp = await axiosWthoutAuth("/auth/signup", {
       method: "POST",
       data,
     });

@@ -14,16 +14,20 @@ import IconTV from '../../assets/icon/icon-tv';
 import { useScrollToTop } from '../../hooks';
 import { DatePicker, Space } from 'antd';
 const { RangePicker } = DatePicker;
-import moment from 'moment';
 import "./style.css"
 import { GetComment } from '../../service/comment.service';
-// import { P } from '../../components/Location/item-locations/style';
+import moment from 'moment';
+import { RangeValue } from 'rc-picker/lib/interface';
+import { Dayjs } from 'dayjs';
 
 function Roomdetail() {
     const [selectedDateRange, setSelectedDateRange] = useState<[moment.Moment, moment.Moment] | null>(null);
 
-    const handleDateChange = (dates: [moment.Moment, moment.Moment] | null) => {
-        setSelectedDateRange(dates);
+    // const handleDateChange = (values: [moment.Moment, moment.Moment] | null) => {
+    //     setSelectedDateRange(values);
+    // };
+    const handleDateChange = (values: RangeValue<Dayjs>) => {
+        setSelectedDateRange(values as [moment.Moment, moment.Moment]);
     };
 
     const calculateNumberOfDays = (): number | null => {
@@ -37,7 +41,7 @@ function Roomdetail() {
     useScrollToTop();
     const param = useParams();
     console.log(param, "param")
-    const id: number = param.id;
+    const id: string | number | any = param.id;
     console.log(id)
     const [detail, setDetail] = useState<TRoomDetail>()
     useEffect(() => {
@@ -95,7 +99,8 @@ function Roomdetail() {
                                 />
                             </Space>
                         </div>
-                        <S.BtnDP>Đặt phòng</S.BtnDP>
+                        <S.BtnDP
+                        >Đặt phòng</S.BtnDP>
                         <p style={{ textAlign: "center", fontSize: 20, margin: "10px 0" }}>Bạn vẫn chưa bị trừ tiền</p>
                         <div className="info__money"></div>
                         <p style={{ fontSize: "2rem", fontWeight: 500 }}>
@@ -117,8 +122,8 @@ function Roomdetail() {
                 </div>
                 <hr style={{ marginTop: "5rem", fontSize: "2rem", fontWeight: 800 }} />
                 <div className="space__cmt">
-                    {comment?.slice(0, 6).map((item, index) => (
-                        <div className='cmt__all' key={index}>
+                    {comment?.slice(0, 6).map((item: any) => (
+                        <div className='cmt__all'>
                             <div>
                                 <S.AVT src={item.avatar} alt="" />
                             </div>

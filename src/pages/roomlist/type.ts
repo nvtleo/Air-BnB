@@ -18,4 +18,5 @@ export interface TRoomAPI {
   banUi: boolean
   maViTri: number
   hinhAnh: string
+  map:any
 }

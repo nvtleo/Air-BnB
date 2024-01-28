@@ -26,4 +26,5 @@ export interface TRoomDetail {
     saoBinhLuan: number
     tenNguoiBinhLuan: string
     avatar: string
+    slice :any
   }

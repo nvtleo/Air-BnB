@@ -26,8 +26,8 @@ function Roomlist() {
     return (
         <>
             <S.RoomList>
-                {room?.map((roomItem, index) => (
-                    <S.Room key={index}>
+                {room?.map((roomItem: any) => (
+                    <S.Room >
                         <div>
                             <h3 className='text-center font-bold text-3xl'>{roomItem.tenPhong}</h3>
                             <S.Image onClick={() => handleNavigate(roomItem.id)} src={roomItem.hinhAnh} alt={roomItem.tenPhong} />
