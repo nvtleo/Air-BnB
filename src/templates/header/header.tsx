@@ -7,6 +7,7 @@ import type { MenuProps } from 'antd';
 import { Dropdown, Space } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector } from '../../redux/hook';
+import logo from "../../assets/img/logo-pink.jpg"
 // import { setLogin } from "../../redux/userSlice";
 // import { removeLocal } from '../../util';
 // import { ACCESS_TOKEN } from '../../const';
@@ -37,7 +38,7 @@ function Header() {
             <header style={{ position: "relative" }}>
                 <div className='flex items-center justify-between' style={{ backgroundColor: "white", width: "100%", paddingBottom: "3rem" }}>
                     <div className="header__img">
-                        <img onClick={handleNavigate} style={{ width: "16rem", height: "8rem", marginLeft: "7rem" }} src="/src/assets/img/logo-pink.jpg" alt="" />
+                        <img onClick={handleNavigate} style={{ width: "16rem", height: "8rem", marginLeft: "7rem" }} src={logo} alt="" />
                     </div>
                     <div className="header__info ml-24">
                         <Link className='text-4xl text-slate-950 Link' to={"."}>Nơi ở</Link>

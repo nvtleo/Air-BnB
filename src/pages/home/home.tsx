@@ -8,7 +8,11 @@ import { useEffect, useState } from "react";
 import { GetLocationsHome } from "../../service/location-home.service";
 import { converts } from "./convert";
 // import { TItemLCT } from "../../components/LCT-home/item-lct-home/item-lct-home";
-
+import crs from "../../assets/img/crs.jpg";
+import img1 from "../../assets/img/img-footer1.png";
+import img2 from "../../assets/img/img-footer2.png";
+import img3 from "../../assets/img/img-footer3.png";
+import img4 from "../../assets/img/img-footer4.png";
 import IconSearch from "../../assets/icon/icon-search";
 function Home() {
     const navigate = useNavigate();
@@ -25,7 +29,7 @@ function Home() {
     return (
         <>
             <div className="carousel">
-                <img src="/src/assets/img/crs.jpg" alt="" />
+                <img src={crs} alt="" />
                 <div className="btn__intro">
                     <button
                         onClick={handleNavigate}
@@ -44,10 +48,10 @@ function Home() {
             </div>
             <ListLctHome data={converts(locationsHome)} />
             <div className="img__footer">
-                <img src="/src/assets/img/img-footer1.png" alt="" />
-                <img src="/src/assets/img/img-footer2.png" alt="" />
-                <img src="/src/assets/img/img-footer3.png" alt="" />
-                <img src="/src/assets/img/img-footer4.png" alt="" />
+                <img src={img1} alt="" />
+                <img src={img2} alt="" />
+                <img src={img3} alt="" />
+                <img src={img4} alt="" />
             </div>
         </>
     )
