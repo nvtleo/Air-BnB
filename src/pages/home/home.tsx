@@ -45,10 +45,10 @@ function Home() {
             {/* location phần trang */}
             <ListLctHome data={converts(locationsHome)} />
             <div className="img__footer">
-                <img src="/dist/assets/img/img-footer1.png" alt="" />
-                <img src="/dist/assets/img/img-footer2.png" alt="" />
-                <img src="/dist/assets/img/img-footer3.png" alt="" />
-                <img src="/dist/assets/img/img-footer4.png" alt="" />
+                <img src="/src/assets/img/img-footer1.png" alt="" />
+                <img src="/src/assets/img/img-footer2.png" alt="" />
+                <img src="/src/assets/img/img-footer3.png" alt="" />
+                <img src="/src/assets/img/img-footer4.png" alt="" />
             </div>
         </>
     )
