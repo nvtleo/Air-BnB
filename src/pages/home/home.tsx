@@ -25,7 +25,7 @@ function Home() {
     return (
         <>
             <div className="carousel">
-                <img src="/dist/assets/img/crs.jpg" alt="" />
+                <img src="/src/assets/img/crs.jpg" alt="" />
                 <div className="btn__intro">
                     <button
                         onClick={handleNavigate}
