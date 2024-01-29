@@ -37,7 +37,7 @@ function Header() {
             <header style={{ position: "relative" }}>
                 <div className='flex items-center justify-between' style={{ backgroundColor: "white", width: "100%", paddingBottom: "3rem" }}>
                     <div className="header__img">
-                        <img onClick={handleNavigate} style={{ width: "16rem", height: "8rem", marginLeft: "7rem" }} src="/dist/assets/img/logo-pink.jpg" alt="" />
+                        <img onClick={handleNavigate} style={{ width: "16rem", height: "8rem", marginLeft: "7rem" }} src="./dist/assets/img/logo-pink.jpg" alt="" />
                     </div>
                     <div className="header__info ml-24">
                         <Link className='text-4xl text-slate-950 Link' to={"."}>Nơi ở</Link>
