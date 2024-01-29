@@ -42,7 +42,6 @@ function Home() {
                     <button> <p style={{ display: "none" }}>a</p> <IconSearch /></button>
                 </div>
             </div>
-            {/* location phần trang */}
             <ListLctHome data={converts(locationsHome)} />
             <div className="img__footer">
                 <img src="/src/assets/img/img-footer1.png" alt="" />
